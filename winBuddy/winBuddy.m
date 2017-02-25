@@ -256,7 +256,7 @@ static void *isActive = &isActive;
 
 - (void)mf_updateBorder {
     NSWindow *borderWin = objc_getAssociatedObject(self, borderKey);
-    [borderWin.contentView setBorderColor:self.isKeyWindow ? [NSColor redColor] : [NSColor blackColor]];
+    [borderWin.contentView setBorderColor:self.isKeyWindow ? [NSColor blackColor] : [NSColor blackColor]];
     [borderWin setFrame:self.frame display:YES];
     if (![ReadPref(@"ShowBorder") boolValue])
             [borderWin.contentView setBorderColor:[NSColor clearColor]];
